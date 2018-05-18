@@ -20,7 +20,7 @@ function afficheSplashScreen() {
 
   setTimeout(
     afficheJeux,
-    100
+    29000
   )
 }
 afficheSplashScreen()

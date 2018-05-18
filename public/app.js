@@ -89,7 +89,7 @@ function afficheSplashScreen() {
 
   setTimeout(
     afficheJeux,
-    1000
+    29000
   )
 }
 afficheSplashScreen()
@@ -105,8 +105,26 @@ const  splashScreenHtml  = `
           <img src="https://sylvainkosc.github.io/planete/1love.png" alt="Star" class="star"/>
           <img src="https://sylvainkosc.github.io/planete/nebuleuse.png" alt="Wars" class="wars"/>
     <h2 class="byline" id="byline">Watch out for the black hole</h2>
+    <embed id="lecteur"  src="https://sylvainkosc.github.io/rougerouge.mp3" autostart="true" loop="false" hidden="true"></embed>
 </div>
-`
+<div id="titles">jdojoqdsoklkdq<div id="titlecontent">
+
+    <p>contentk
+    k
+    k
+    k
+    k
+    k
+    </p>
+
+</div></div>
+<div id="galaxy">
+            <div class="bg"></div>
+            <div class="stars-back"></div>
+            <div class="stars-middle"></div>
+            <div class="stars-front"></div>
+            <div class="bg center"></div>
+        </div>`
 
 module.exports = splashScreenHtml
 
@@ -117,6 +135,8 @@ module.exports = splashScreenHtml
 
 // intro splash
 const jeuxHtml = `
+
+
 <div id="galaxy">
   <div class="bg"></div>
   <div class="stars-back"></div>
@@ -124,7 +144,35 @@ const jeuxHtml = `
   <div class="stars-front"></div>
   <div class="bg center"></div>
 </div>
-<div id="quiz"></div>`
+
+
+
+
+<div class="container-fluid" >
+  <div class="row">
+    <div class="col-lg-4" style="height:70px; background-color:green"></div>
+    <div class="col-lg-4">
+      <img class="logolove" src="https://sylvainkosc.github.io/LOVE.png" alt="logo"/>
+    </div>
+    <div class="offset-lg-2 col-lg-1" style="height:10px; background-color:green"></div>
+  </div>
+  <div class="row">   
+    <div class="offset-6 col-lg-2" style="height:30px; background-color:green"></div>   
+  </div>
+  <div class="row"><div class="col-lg-4" style="height:200px"></div></div>
+  <div class="row">  
+    <div class="col-lg-2" id="quiz">
+      <div class='button' id='next'><a href='#'>Next</a></div>
+      <div class='button' id='prev'><a href='#'>Prev</a></div>
+      <div class='button' id='start'> <a href='#'>Start Over</a></div>
+    </div>
+    <div class="col-lg-3" style="height:50px; background-color:green"></div>
+  </div>
+  <div class="row">
+    <div class="offset-lg-8 col-lg-2" style="height:20px; background-color:green"></div>
+  </div>
+</div>
+`
 
 module.exports = jeuxHtml
 
@@ -205,23 +253,6 @@ module.exports = (function() {
       {label: 'Sérieusement ?', value: "rip"},
     ]
   },
-  // {
-  //   question: "Les yeux plutôt ?",
-  //   choices: ['Bleus','Verts','Marron','Borgne'],
-  //   correctAnswer: 0,1,2,3,
-  // }, {
-  //   question: "What is 8*9?",
-  //   choices: [72, 99, 108, 134, 156],
-  //   correctAnswer: 0,1,2,3,
-  // }, {
-  //   question: "What is 1*7?",
-  //   choices: [4, 5, 6, 7, 8],
-  //   correctAnswer: 0,1,2,3,
-  // }, {
-  //   question: "What is 8*8?",
-  //   choices: [20, 30, 40, 50, 64],
-  //   correctAnswer: 0,1,2,3,
-  // }
   ];
 
   var questionCounter = 0; //Tracks question number
