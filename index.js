@@ -159,7 +159,6 @@ fetch("https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/all.json")
             <img src="${orderedPlanets[i].image}" alt="planet"/>
             <p>${orderedPlanets[i].planet.toUpperCase()}</p>
             <p>nombre de profils compatibles: ${orderedPlanets[i].number}</p>
-
         `
       }
     }
@@ -173,12 +172,20 @@ fetch("https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/all.json")
         `
       }
     }
+    if(match.length == 0) {
+      picture +=`
+        <div>
+          <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/1-kepler452b2.jpg" alt="alone?"/>
+          <h4>Merci de réessayer avec d'autres critères</h4>
+          <h1>La force ne permet pas de tout trouver</h1>          
+        </div>
+      `
+    }
     contentContainer.innerHTML = picture
   }
 
-  filter("species", ["droid", "human", "wookiee"])
-  filter("eyeColor", ["brown","gray-blue", "yellow"])
-  filter("gender", ["male"])
+  filter("species", ["human"])
+  filter("eyeColor", ["yellow"])
   getOrderedPlanets(filteredData)
   showPictures(filteredData)
 
