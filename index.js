@@ -49,6 +49,7 @@ fetch("https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/all.json")
       planets: ["mirial", "ojom"]}
   ]
   const planets = []
+  let orderedPlanets
   for(character of filteredData) {
     const object = {}
     let search
@@ -112,4 +113,8 @@ fetch("https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/all.json")
     }
   }
   console.log(planets)
+  orderedPlanets = planets.sort(function compare(a, b) {
+    return b.number - a.number
+  })
+  console.log(orderedPlanets)
 })
