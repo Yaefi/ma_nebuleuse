@@ -3,7 +3,7 @@ const  splashScreenHtml  = `
           <img src="https://sylvainkosc.github.io/planete/1love.png" alt="Star" class="star"/>
           <img src="https://sylvainkosc.github.io/planete/nebuleuse.png" alt="Wars" class="wars"/>
     <h2 class="byline" id="byline">Watch out for the black hole</h2>
-    <embed src="https://sylvainkosc.github.io/master/rougerouge.mp3" autostart="true" loop="false" hidden="true"></embed>
+    <embed id="lecteur"  src="https://sylvainkosc.github.io/rougerouge.mp3" autostart="true" loop="false" hidden="true"></embed>
 </div>
 <div id="titles">jdojoqdsoklkdq<div id="titlecontent">
 
