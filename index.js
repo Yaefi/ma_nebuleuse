@@ -147,12 +147,40 @@ fetch("https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/all.json")
         return b.number - a.number
       })
     }
+    return orderedPlanets
+  }
+
+  const showPictures = match => {
+    let picture = ""
+    if(match.length > 3) {
+      for(i = 0; i < 5 && i < orderedPlanets.length; i++) {
+        picture +=`
+          <div>
+            <img src="${orderedPlanets[i].image}" alt="planet"/>
+            <p>${orderedPlanets[i].planet.toUpperCase()}</p>
+            <p>nombre de profils compatibles: ${orderedPlanets[i].number}</p>
+
+        `
+      }
+    }
+    if(match.length <= 3 && match.length > 0) {
+      for(character of match) {
+        picture +=`
+          <div>
+            <img src="${character.image}" alt="potential soulmate"/>
+            <p>${character.name}</p>
+          </div>
+        `
+      }
+    }
+    contentContainer.innerHTML = picture
   }
 
   filter("species", ["droid", "human", "wookiee"])
-  filter("eyeColor", ["blue", "gray-blue", "yellow"])
+  filter("eyeColor", ["brown","gray-blue", "yellow"])
   filter("gender", ["male"])
   getOrderedPlanets(filteredData)
+  showPictures(filteredData)
 
   console.log(filteredData)
   console.log(orderedPlanets)
