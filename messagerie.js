@@ -1,4 +1,4 @@
-const contentContainer = document.getElementById("chat")
+const contentContainer = document.getElementById("mess")
 
 function getContactHTML(character) {
   return /* @html */ `

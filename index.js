@@ -7,7 +7,7 @@ function getHomeHTML(character) {
 
 	return /* @html */ `
 
-	<div class="affiliations"  style="background-image: url(${character.image})">
+	<div class="affiliations"  xxxstyle="background-image: url(${character.image})">
 		<div class="character-infos">
 			<div class="character-name">${character.name}</div>
 			<div class="character-born">Born: ${character.born}</div>
